@@ -1,0 +1,170 @@
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài tập 3_NET
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 80px 104px;
+            }
+            .contact-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .contact-info {
+                width: 50%;
+                padding: 40px 24px;
+                background-color: #f9f9f9;
+            }
+            .contact-form {
+                width: 50%;
+                padding: 40px 24px;
+            }
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                font-size: 0.8rem;
+            }
+            .contact-form button {
+                background-color: #e85d04;
+                color: #fff;
+                border: none;
+                padding: 16px 32px;
+                border-radius: 8px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: stretch;
+            }
+            .contactdet{
+                display: flex;
+                align-items: center;
+                justify-content: stretch;
+                margin-bottom: 8px;
+            }
+            .infor{ 
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                font-size: 18px;                
+            }
+            .material-symbols-outlined{
+                margin-right: 16px;
+                font-weight: 300;
+                color: #bc0000;
+            }
+           
+            p {
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                font-size: 18px;
+            }
+            #s {
+                color: white;
+                margin-right: 4px ;
+            }
+            h1 {
+                font-family: "Roboto", sans-serif;
+                font-weight: 100;
+                font-size: 5rem;
+                text-transform: capitalize;
+                text-align: center;
+                padding-bottom: 32px;
+                color: #dc2f02;
+            }
+            h3{
+                font-family: "Roboto", sans-serif;
+                font-weight: 600;
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                padding-bottom: 16px;
+                color: #dc2f02;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Liên hệ</h1>
+        <hr >
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h3>Thông tin</h3>
+                <div class="contactdet"> 
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <span class="infor"> 
+                        Kp. 6, P. Linh Trung, Tp. Thủ Đức, TP. HCM
+                    </span> 
+                </div>
+                <div class="contactdet"> 
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <spann class="infor"> 
+                        info@uit.edu.vn
+                    </span> 
+                </div>
+                <div class="contactdet"> 
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+                    <spann class="infor"> 
+                        +84 28 3725 2002
+                    </span> 
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3><font>Hãy liên lạc với chúng tôi bất cứ khi nào!!!</font></h3>
+                <form action="#" method="post">
+                    
+                    <input type="text" id="name" placeholder="Họ và tên" required>
+                    <input type="email" id="email" placeholder="Địa chỉ email" required>
+                    <input type="text" id="subject" placeholder="Tiêu đề của bài viết" required>
+                    <textarea id="message" rows="4" placeholder="Nội dung cần gửi" required></textarea>
+                    <button type="submit" onclick="displayConfirmation()">
+                        <span class="material-symbols-outlined" id="s">
+                            send
+                        </span>
+                        <spann class="infor"> 
+                            Gửi tin nhắn
+                        </span> 
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+             function displayConfirmation() 
+            {   const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const title = document.getElementById("subject").value;
+                const mess= document.getElementById("message").value;
+                window.confirm("Họ và tên: " + name + "\nE-mail: " + email + "\nTiêu đề: " + title + "\nTin nhắn: " + mess)
+                alert(confirmation);
+            } 
+        </script>
+              
+    </body>
+    </html>
